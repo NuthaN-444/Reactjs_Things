@@ -6,7 +6,7 @@ import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename="/Reactjs_Things">
+    <BrowserRouter basename="/Reactjs_Things/Random_Number_Generator">
       <App />
     </BrowserRouter>
   </StrictMode>
