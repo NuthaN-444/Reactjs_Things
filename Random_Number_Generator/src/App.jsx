@@ -3,9 +3,9 @@ import Compo from './Compo'
 
 const App = () => {
   return (
-    <>
+    <div>
       <Compo />
-    </>
+    </div>
   )
 }
 
