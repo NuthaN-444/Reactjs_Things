@@ -10,7 +10,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter basename="/Reactjs_Things/Random_Number_Generator">
     <Routes>
-          <Route path='/Random_Number_Generator' element={<App />}/>
+          <Route path='/' element={<App />}/>
       </Routes>
     </BrowserRouter>
   </StrictMode>
