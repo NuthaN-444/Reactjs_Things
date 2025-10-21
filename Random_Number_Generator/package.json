@@ -1,6 +1,6 @@
 {
   "name": "random-number-generator",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://nuthan-444.github.io/Reactjs_Things/Random_Number_Generator",
