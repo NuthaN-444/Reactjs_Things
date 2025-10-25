@@ -1,0 +1,130 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+body {
+  background-color: rgba(148, 137, 117, 0.37);
+}
+.light {
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s;
+}
+
+.dark{
+  width: 500px;
+  height: 500px;
+  background-color: rgb(15, 15, 15);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s;
+}
+
+
+img {
+  margin-top: 20px;
+  width: 450px;
+  height: 250px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.data-light{
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /* gap: 70%; */
+}
+
+.light p {
+  font-size: 25px;
+  color: black;
+}
+
+.data-dark{
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /* gap: 70%; */
+}
+
+.dark p {
+  font-size: 25px;
+  color: white  ;
+}
+
+
+.button-light {
+  width: 500px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 24%;
+  padding-bottom: 55px;
+  border: none;
+  font-size: 25px;
+  font-weight: bolder;
+  transform: translate(-50%,-50%);
+  background-color:white;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.button-light:hover {
+  color: rgba(0, 0, 0, 0.226);
+  background-color:rgb(255, 255, 255);
+
+}
+
+.button-dark {
+  width: 500px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 24%;
+  padding-bottom: 55px;
+  border: none;
+  font-size: 25px;
+  font-weight: bolder;
+  transform: translate(-50%,-50%);
+  background-color:rgb(0, 0, 0);
+  color: white;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.button-dark:hover {
+  color: rgba(255, 255, 255, 0.226);
+  background-color:rgb(0, 0, 0);
+
+}
