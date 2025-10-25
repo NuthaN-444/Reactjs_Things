@@ -15,6 +15,7 @@ const ToggleBtn = () => {
     } else {
       btnRef.current.classList.remove("button-dark");
       btnRef.current.classList.add("button-light");
+      btnRef.current.innerText="Dark Mode";
     }
   },[theme])
 
