@@ -6,19 +6,17 @@ const Compo = () => {
   const [numberAllowed,setNumberAllowed] = useState(false);
   const [charAllowed,setCharAllowed] = useState(false);
   const [password,setPassword] = useState("");
-  const [copied,setCopied] = useState(false);
 
-
+  const copyRef = useRef(null);
   const passwordRef = useRef(null);
+  
   const copyToClipBoard = useCallback(()=>{
-    const container = document.getElementsByClassName("container");
     passwordRef.current?.select();
     window.navigator.clipboard.writeText(password);
-    
-    setCopied(true);
+    copyRef.current.innerText = "Copied";
       setTimeout(() => {
-        setCopied(false);
-      }, 3000);
+            copyRef.current.innerText = "Copy";
+      }, 5000);
   },[password])
 
 
@@ -49,25 +47,21 @@ const Compo = () => {
           <h1>Password Generator</h1>
           <div className='password-div'>
             <input type="text" placeholder='Random Password' value={password} ref={passwordRef} readOnly/>
-            <button onClick={copyToClipBoard}>Copy</button>
+            <button onClick={copyToClipBoard} ref={copyRef}>Copy</button>
           </div>
 
           <div className='dependencies'>
 
-              <input type="range" min={8} max={20} id='rangeTag' value={length} onChange={(e) => setLength(e.target.value)}/>
-              <label>Length={length}</label>
+              
+              <label><input type="range" min={8} max={20} id='rangeTag' value={length} onChange={(e) => setLength(e.target.value)}/>Length={length}</label>
 
-              <input type="checkbox" onChange={() => setNumberAllowed((prev) => !prev)}/>
-              <label>Numbers</label>
+              
+              <label><input type="checkbox" onChange={() => setNumberAllowed((prev) => !prev)}/>Numbers</label>
 
-              <input type="checkbox" onChange={() => setCharAllowed((prev) => !prev)}/>
-              <label>Special Characters</label>
+              
+              <label><input type="checkbox" onChange={() => setCharAllowed((prev) => !prev)}/>Special Characters</label>
           </div>
       </div>
-                                    {/* add copied feature  */}
-      {copied && <div className='copied-message'>
-         Copied!
-      </div>}
         </>
   )
 }

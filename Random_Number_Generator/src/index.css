@@ -3,7 +3,11 @@
   margin: 0%;
 }
 
+body {
+  background-color: rgb(27, 31, 26);
+}
 .container {
+  color: white;
   padding: 30px;
   position: absolute;
   top: 50%;
@@ -11,7 +15,7 @@
   transform: translate(-50%,-50%);
   width: 40vw;
   height: 150px;
-  background-color: rgba(245, 222, 179, 0.527);
+  background-color: rgba(36, 43, 35, 0.527);
   border-radius: 30px;
   display: flex;
   flex-direction: column;
@@ -47,13 +51,16 @@ h1 {
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   border: none;
-  cursor: pointer;
-  transition: all 0.3s linear;
-}
-.password-div button:hover {
-  /* background-color: rgba(11, 201, 11, 0.425); */
-  border-bottom: 5px solid rgba(0, 0, 0, 0.637);
   padding-bottom: 10px;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.637);
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.password-div button:active {
+  /* background-color: rgba(11, 201, 11, 0.425); */
+  padding-top: 10px;
+  border-bottom: 5px solid rgba(0, 0, 0, 0);
+
 }
 .password-div button:active {
   border-bottom: none;
@@ -65,7 +72,7 @@ h1 {
 .dependencies input {
     margin-left: 20px;
     margin-right: 5px;
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .copied-message {
@@ -85,4 +92,119 @@ h1 {
   font-size: 19px;
   transition: all 0.3s;
   color: black;
+}
+
+@media only screen and (max-width:1275px) {
+
+  .container {
+  padding: 10px;
+  width: 80vw;
+  height: 30vh;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.226);
+}
+h1 {
+  margin-bottom: 20px;
+}
+.password-div {
+  width: 56vw;
+  display: flex;
+  flex-direction: row;
+  height: 8vh;
+  /* background-color: black; */
+}
+.password-div input {
+  width: 80%;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  padding-left: 30px;
+  border: none;
+  cursor:copy;
+  font-size: 19px;
+}
+
+.password-div button {
+  background-color: rgb(11, 201, 11);
+  font-size: 18px;
+  font-weight: 600;
+  width: 15vw;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border: none;
+  padding-bottom: 10px;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.637);
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+}
+
+@media only screen and (max-width:600px) {
+.container {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  padding: 10px;
+  padding-top: 30px;
+  width: 80vw;
+  height: 28vh;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.226);
+}
+h1 {
+  margin-bottom: 20px;
+}
+.password-div {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  height: 8vh;
+  /* background-color: black; */
+}
+.password-div input {
+  width: 70%;
+  height: 50px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  padding-left: 30px;
+  border: none;
+  cursor:copy;
+  font-size: 15px;
+}
+
+.password-div button {
+  background-color: rgb(11, 201, 11);
+  font-size: 18px;
+  font-weight: 600;
+  width: 30%;
+  height: 50px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border: none;
+  padding-bottom: 10px;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.637);
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.dependencies {
+  position: relative;
+  top: -10%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dependencies label {
+  margin-top: 10px;
+}
 }
